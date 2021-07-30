@@ -95,7 +95,6 @@ const styles = StyleSheet.create({
         color: "#fff",
         textAlign: "center",
         width: 270,
-        height: 54,
         fontFamily: "Poppins-Regular",
         fontSize: 14,
         marginBottom: 150

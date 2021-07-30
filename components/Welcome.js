@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#000000',
     },
     textContainer: {
-        marginTop: 30,
+        marginTop: 50,
         alignSelf: "flex-end",
         width: 216,
         marginRight: 20
