@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
         color: "#DA6A60",
         fontFamily: "Play-Regular",
         fontSize: 30,
-        textAlign: "center"
+        textAlign: "center",
+        marginBottom: 10
     },
     introText: {
         color: "#ffffff",
