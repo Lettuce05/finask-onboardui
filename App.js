@@ -5,6 +5,7 @@ import * as Font from 'expo-font';
 import { Asset } from 'expo-asset';
 import Onboard from './components/Onboard';
 import { Feather } from '@expo/vector-icons';
+import Welcome from './components/Welcome'
 
 
 function cacheImages(images) {
@@ -29,6 +30,7 @@ export default function App() {
       require('./assets/images/onboard1.png'),
       require('./assets/images/onboard2.png'),
       require('./assets/images/onboard3.png'),
+      require('./assets/images/intro.png'),
     ]);
 
     const fontAssets = cacheFonts([
@@ -52,7 +54,8 @@ export default function App() {
   } else {
     return (
       <View style={styles.container}>
-        <Onboard />
+        <Welcome />
+        {/* <Onboard /> */}
       </View>
     );
   }
