@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.textContainer}>
@@ -12,7 +12,7 @@ const Welcome = () => {
             </View>
             <View style={styles.introContainer}>
                 <Image source={require('../assets/images/intro.png')}/>
-                <TouchableOpacity style={styles.buttonWrapper}>
+                <TouchableOpacity style={styles.buttonWrapper} onPress={()=> navigation.navigate("Onboard")}>
                     <Text style={styles.buttonText}>Get Started</Text>
                 </TouchableOpacity>
             </View>
@@ -25,7 +25,8 @@ export default Welcome
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: '#000000',
     },
     textContainer: {
         marginTop: 30,

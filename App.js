@@ -1,4 +1,7 @@
+import 'react-native-gesture-handler';
 import React, {useState} from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet, Text, View } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
@@ -7,6 +10,8 @@ import Onboard from './components/Onboard';
 import { Feather } from '@expo/vector-icons';
 import Welcome from './components/Welcome'
 
+
+const Stack = createStackNavigator();
 
 function cacheImages(images) {
   return images.map(image => {
@@ -53,10 +58,19 @@ export default function App() {
     />;
   } else {
     return (
-      <View style={styles.container}>
-        <Welcome />
-        {/* <Onboard /> */}
-      </View>
+      <NavigationContainer>
+        <View style={styles.container}>
+          <Stack.Navigator 
+            screenOptions={{
+              headerShown: false,
+            }}
+          >
+            <Stack.Screen name="Welcome" component={Welcome}/>
+            <Stack.Screen name="Onboard" component={Onboard} />
+          </Stack.Navigator>
+        </View>
+      </NavigationContainer>
+      
     );
   }
   
@@ -65,8 +79,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#000000'
   },
 });
