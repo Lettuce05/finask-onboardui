@@ -62,13 +62,15 @@ const Onboard = () => {
     }
 
     return (
-        <View>
+        <View style={{height: "100%", width: "100%"}}>
             <AppIntroSlider
                 data={slides}
                 keyExtractor={keyExtractor} 
                 renderItem={renderItem} 
                 renderNextButton={renderNextButton}    
-                renderDoneButton={renderDoneButton}    
+                renderDoneButton={renderDoneButton}
+                dotStyle={styles.dotStyle}
+                activeDotStyle={styles.activeDotStyle}    
             />
         </View> 
     )
@@ -117,6 +119,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    dotStyle: {
+        backgroundColor: "#979797"
+    },
+    activeDotStyle: {
+        backgroundColor: "#F3F3F3",
+        width: 50
+
+    }
 })
 
 export default Onboard;
