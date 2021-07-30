@@ -62,13 +62,15 @@ const Onboard = () => {
     }
 
     return (
-        <AppIntroSlider
-            data={slides}
-            keyExtractor={keyExtractor} 
-            renderItem={renderItem} 
-            renderNextButton={renderNextButton}    
-            renderDoneButton={renderDoneButton}    
-        />
+        <View>
+            <AppIntroSlider
+                data={slides}
+                keyExtractor={keyExtractor} 
+                renderItem={renderItem} 
+                renderNextButton={renderNextButton}    
+                renderDoneButton={renderDoneButton}    
+            />
+        </View> 
     )
 }
 
